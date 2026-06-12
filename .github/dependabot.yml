@@ -1,0 +1,59 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directories:
+      - "/"
+      - "/workspace/projects/ai-council-system/web/frontend"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      npm-deps:
+        patterns: ["*"]
+  - package-ecosystem: "pip"
+    directories:
+      - "/"
+      - "/workspace/projects/ai-council-system"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      pip-deps:
+        patterns: ["*"]
+  - package-ecosystem: "github-actions"
+    directories:
+      - "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      github-actions-deps:
+        patterns: ["*"]
+  - package-ecosystem: "docker"
+    directories:
+      - "/containers/base"
+      - "/containers/languages/dotnet"
+      - "/containers/languages/java"
+      - "/containers/languages/node"
+      - "/containers/languages/python"
+      - "/containers/services/postgres"
+      - "/containers/services/redis"
+      - "/workspace/orgs/CoreSystems/cli-tools/.devcontainer"
+      - "/workspace/orgs/CoreSystems/os-kernel/.devcontainer"
+      - "/workspace/orgs/CoreSystems/ui-library/.devcontainer"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      docker-deps:
+        patterns: ["*"]
+  - package-ecosystem: "cargo"
+    directories:
+      - "/workspace/projects/ai-council-system/blockchain/contracts/solana/council_selection"
+      - "/workspace/projects/ai-council-system/blockchain/contracts/solana/voting"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      cargo-deps:
+        patterns: ["*"]
