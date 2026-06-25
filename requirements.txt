@@ -2,8 +2,8 @@
 # Install with: pip install -r requirements.txt
 
 # AI/LLM API clients
-openai>=2.43.0
-anthropic>=0.111.0
+openai>=2.44.0
+anthropic>=0.112.0
 
 # Core dependencies
 asyncio-compat>=0.1.0  # Async utilities
