@@ -13,8 +13,14 @@ from pathlib import Path
 
 # Add repository root to path to allow imports
 repo_root = Path(__file__).resolve().parent.parent
-if str(repo_root) not in sys.path:
-    sys.path.insert(0, str(repo_root))
+candidate_roots = [
+    repo_root,
+    repo_root / "workspace" / "projects" / "ai-council-system",
+]
+
+for path in candidate_roots:
+    if path.exists() and str(path) not in sys.path:
+        sys.path.insert(0, str(path))
 
 try:
     from swarm.orchestrator.task_decomposer import TaskDecomposer, TaskType
@@ -113,6 +119,10 @@ class SubIssueSuggester:
                     output.append("**Dependencies:**")
                     for dep in task.dependencies:
                         output.append(f"- Depends on: `{dep.task_id}` ({dep.dependency_type})")
+                    output.append("")
+                else:
+                    output.append("**Dependencies:**")
+                    output.append("- Depends on: `none` (blocks)")
                     output.append("")
 
                 output.append("**Labels:** " + ", ".join([
