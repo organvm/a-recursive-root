@@ -6,8 +6,8 @@ pyyaml>=6.0.3
 python-dateutil>=2.9.0.post0
 
 # LLM Providers
-anthropic>=0.111.0
-openai>=2.43.0
+anthropic>=0.115.1
+openai>=2.44.0
 
 # Event Sources
 tweepy>=4.16.0  # Twitter API
@@ -16,23 +16,23 @@ feedparser>=6.0.12  # RSS feeds
 requests>=2.34.2  # HTTP requests
 
 # Text-to-Speech
-elevenlabs>=2.53.0  # ElevenLabs TTS
+elevenlabs>=2.56.0  # ElevenLabs TTS
 pyttsx3>=2.99  # Offline TTS fallback
 gTTS>=2.5.4  # Google TTS fallback
 
 # Web Framework
-fastapi>=0.138.0
+fastapi>=0.139.0
 uvicorn[standard]>=0.49.0
 websockets>=16.0
 python-multipart>=0.0.32
 
 # Streaming & Media
 ffmpeg-python>=0.2.0
-Pillow>=12.2.0
+Pillow>=12.3.0
 opencv-python>=4.13.0.92
 
 # Data Processing
-numpy>=2.4.6
+numpy>=2.5.0
 pandas>=3.0.3
 
 # Utilities
@@ -50,20 +50,20 @@ pytest-mock>=3.15.1
 black>=26.5.1
 flake8>=7.3.0
 mypy>=2.1.0
-ipython>=9.14.1
+ipython>=9.15.0
 
 # Blockchain (Phase 3)
 web3>=7.16.0  # Ethereum/Web3
 eth-account>=0.13.7  # Ethereum accounts
 eth-utils>=6.0.0  # Ethereum utilities
-solana>=0.37.1  # Solana Python client
+solana>=0.40.0  # Solana Python client
 anchorpy>=0.21.0  # Anchor framework Python bindings
-solders>=0.27.1  # Solana SDK
+solders>=0.28.0  # Solana SDK
 base58>=2.1.1  # Base58 encoding
 pynacl>=1.6.2  # Libsodium/NaCl crypto
 
 # Avatar Generation (Phase 4.1)
 replicate>=1.0.7  # Replicate API for Stable Diffusion
-# openai>=2.43.0  # Already included above for DALL-E 3
-# Pillow>=12.2.0  # Already included above for image processing
-# numpy>=2.4.6  # Already included above
+# openai>=2.44.0  # Already included above for DALL-E 3
+# Pillow>=12.3.0  # Already included above for image processing
+# numpy>=2.5.0  # Already included above
